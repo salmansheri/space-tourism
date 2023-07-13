@@ -1,27 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Bellefair&display=swap');
+
+
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed&display=swap');
+
+
+@import url('https://fonts.googleapis.com/css2?family=Barlow&display=swap');
+
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+@layer base {
+  body {
+    @apply bg-background text-text-primary; 
   }
-}
+  .heading-1 {
+    @apply text-heading-1 font-bellefair; 
+  }
+  
+  .heading-2 {
+    @apply text-heading-2 font-bellefair;
+  }
+  
+  .heading-3 {
+    @apply text-heading-3 font-bellefair; 
+  }
+  
+  .heading-4 {
+    @apply text-heading-4 font-bellefair; 
+  }
+  
+  .heading-5 {
+    @apply text-heading-5 tracking-letter-heading-5 font-bellefair; 
+  }
+  
+  .sub-heading-1 {
+    @apply font-bellefair text-sub-heading-1; 
+  }
+  
+  .sub-heading-2 {
+    @apply font-barlow-condensed text-sub-heading-2 tracking-letter-sub-heading-2
+  }
+  
+  .nav-text {
+    @apply font-barlow-condensed text-nav-text tracking-letter-nav-text; 
+  }
+  
+  
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
 }
